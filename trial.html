@@ -1,0 +1,165 @@
+Certainly! I've improved the HTML semantics for the provided code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIKAN Excel School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .logo-side {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #2980b9;
+            padding: 0.5em;
+        }
+
+        .menuitems {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitems li {
+            margin: 0;
+            padding: 0;
+            margin-right: 15px;
+        }
+
+        .menuitems a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menuitems ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menuitems li ol {
+            display: none;
+            position: absolute;
+            background-color: #2980b9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menuitems:hover ol {
+            display: block;
+        }
+
+        .menuitems ol li {
+            margin: 0;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        .menuitems ol a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        main {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .About {
+            text-align: left;
+        }
+
+        .writeup1, .writeup {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <div class="logo-side">
+            <figure class="logo">
+                <img src="Img/IMG-20221228-WA0012-removebg-preview.png" alt="Logo of school">
+            </figure>
+            
+            <h1 class="logo-name">
+                CIKAN EXCEL SCHOOL
+            </h1>
+       </div>
+       <nav class="menu">
+            <ul class="menuitems">
+                <li class="item1"><a href="">Home</a></li>       
+                <li class="item2"><a href="">About us</a></li>       
+                <li class="item3"><a href="">Academics</a><ol class="service-list">
+                    <li class="servicelist1"><a href="">Creche</a></li>
+                    <li class="servicelist1"><a href="">Pre-nursery</a></li>
+                    <li class="servicelist2"><a href="">Nursery</a></li>
+                    <li class="servicelist3"><a href="">Primary</a></li>
+                    <li class="servicelist4"><a href="">Junior secondary</a></li>
+                </ol></li>
+                <li class="item4"><a href="">Admissions</a></li>       
+                <li class="item4"><a href="">Shop</a><ol>
+                    <li class="shoplist1"><a href="">Uniform</a></li>
+                    <li class="shoplist2"><a href="">Textbook</a></li>
+                    <li class="shoplist3"><a href="">Exercise book</a></li>
+                </ol></li>   
+                <li class="item5"><a href="">Contact us</a><ol>
+                    <li class="contactlist"><a href="">Potential student</a></li>
+                    <li class="contactlist"><a href="">Employment</a></li>
+                </ol></li>       
+            </ul>
+       </nav>
+    </header>
+
+    <main>
+        <!-- About us -->
+
+        <section class="About">
+            <article class="writeup1">
+                <h2>About</h2>
+                <p>CIKAN Excel School was created in 2014 out of the founder’s passion to make a positive difference in the lives of young people in Africa using Nigeria as the starting point.
+                Every child that walks into the CES premises as a student is part of the CIKAN Excel School (CES) family. This is a place where close ties between home and school are developed and nurtured.</p>
+            </article>
+            <article class="writeup">
+                <h3>Our Mission</h3>
+                <p></p>
+            </article>
+        </section>
+
+        <section class="Academics">
+
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon {
+  font-size: 10rem;
+  color: #2980b9;
+  transition: transform, 0.5s, ease;
+}
+
+/* ///////////////////////////////////// Header /////////////////////////////////////*/
+header {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+.logo-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo-side h1 {
+  font-size: 4rem;
+}
+
+.logo img {
+  width: 300px;
+  height: 300px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #2980b9;
+  padding: 0.5em;
+}
+
+.menuitems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menuitems li {
+  margin: 0;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.menuitems a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menuitems ol {
+  list-style: none;
+  padding: 0;
+}
+
+.menuitems li ol {
+  display: none;
+  position: absolute;
+  background-color: #2980b9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+li:hover ol {
+  display: block;
+}
+
+.menuitems ol li {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.menuitems ol a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* ///////////////////////////////Header Phone responsiveness ////////////////////////*/
+
+@media only screen and (max-width: 530px) {
+  .logo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .logo-side h1 {
+    font-size: 2rem;
+  }
+
+  header .menu {
+    background-color: hsla(229, 98%, 19%, 0.5);
+    backdrop-filter: blur(25px);
+    color: white;
+    width: 100%;
+    position: fixed;
+    inset: 0 0 0 25%;
+    z-index: 1000;
+    border: 0px;
+    padding: min(20vh, 200px) 0px;
+    margin-left: 0px;
+    transform: translateX(80%);
+    transition: transform 350ms ease-out;
+  }
+
+  header .menu[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  @supports (backdrop-filter: blur(20px)) {
+    header .menu {
+      background-color: hsla(243, 90%, 45%, 0.641);
+      backdrop-filter: blur(20px);
+    }
+  }
+
+  header .menu ul {
+    flex-direction: column;
+    font-size: 25px;
+    margin: 0px;
+    /* align-content: center; */
+    width: 100%;
+  }
+
+  header .menu ul li {
+    display: inline-block;
+    padding: 20px 50px 30px;
+    border-top: 1px solid white;
+  }
+
+  header .menu ul li a > [aria-hidden="true"] {
+    display: inline-block;
+  }
+
+  header .menu-button {
+    display: block;
+    left: 320px;
+    top: 50px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    width: 30px;
+    border: 0px;
+    aspect-ratio: 1;
+    background: url(Img/icon-hamburger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .menu-button[aria-expanded="true"] {
+    background-image: url(Img/icon-close.svg);
+    position: fixed;
+    top: 50px;
+  }
+}
+/* /////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////// */
+
+main {
+  /* padding: 2em; */
+  text-align: center;
+}
+
+/* /////////////////////////////////////  ABOUT US //////////////////////////////////*/
+.About {
+  color: #3498db;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.writeup {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* //////////////////////////// About Us Phone Responsivenes///////////////////////// */
+@media only screen and (max-width: 530px) {
+  .About .writeup p {
+    width: 70%;
+    transform: translateX(20%);
+  }
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////// ACADEMICS /////////////////////////////////////// */
+
+.Academics {
+  color: #fff;
+  background-color: #2980b9;
+}
+
+.Academics h2 {
+  color: #fff;
+}
+
+.Academics .content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Academics .content a {
+  color: #fff;
+}
+
+.Academics .content .subcontent:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.Academics .subcontent {
+  flex: 0 1 200px;
+  margin: 10px;
+}
+
+.subcontent img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ///////////////////////////// ACADEMICS ENDS//////////////////////////////////////// */
+
+/* /////////////////////////////////////////ADMISSION////////////////////////////////// */
+.Admission {
+  color: #3498db;
+}
+
+.Admission .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Admission .content .subcontent:hover {
+  transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 530px) {
+  .Admission .content {
+    justify-content: center;
+  }
+}
+/* //////////////////////////////////////ADMISSION ENDS//////////////////////////////// */
+
+/* ////////////////////////////////////// EXTRACURRICULARS///////////////////////////// */
+
+.Extracurricular {
+  background-color: #3498db;
+}
+
+.Extracurricular h2 {
+  color: #fff;
+}
+
+.Extracurricular .content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Extracurricular .content a {
+  color: #fff;
+}
+
+.Extracurricular .content .subcontent:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.Extracurricular .subcontent {
+  flex: 0 1 200px;
+  margin: 10px;
+}
+
+.Extracurricular img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ////////////////////////////////// EXTRACURRICULARS END///////////////////////////// */
+
+/* /////////////////////////////////////////CONTACT////////////////////////////////// */
+
+.Contact {
+  color: #3498db;
+  margin-bottom: 50px;
+}
+
+.Contact .subcontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Contact .content .subcontentTeacher:hover,
+.subcontentStudent:hover {
+  transform: translateY(-10px);
+}
+
+/* //////////////////////////////////////CONTACT ENDS///////////////////////////////// */
+
+footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 0.3em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
