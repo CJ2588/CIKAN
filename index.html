@@ -35,7 +35,7 @@
         <ul class="menuitems" id="menubtn">
           <li class="item1"><a href="#">Home</a></li>
           <li class="item2"><a href="#">About us</a></li>
-          <li class="item3">
+          <li class="item3 expandable">
             <a href="#">Academics</a>
             <ol class="service-list">
               <li class="servicelist1"><a href="#">Creche</a></li>
@@ -46,7 +46,7 @@
             </ol>
           </li>
           <li class="item4"><a href="#">Admissions</a></li>
-          <li class="item4">
+          <li class="item4 expandable">
             <a href="#">Shop</a>
             <ol>
               <li class="shoplist1"><a href="#">Uniform</a></li>
@@ -54,7 +54,7 @@
               <li class="shoplist3"><a href="#">Exercise book</a></li>
             </ol>
           </li>
-          <li class="item5">
+          <li class="item5 expandable">
             <a href="#">Contact us</a>
             <ol>
               <li class="contactlist"><a href="#">Future Student</a></li>
@@ -118,7 +118,11 @@
           </figure>
           <figure class="subcontent subcontent5">
             <a href="">
-              <img src="Img/Secondary.jpeg" alt="Picture of Secondary children" height="200px"/>
+              <img
+                src="Img/Secondary.jpeg"
+                alt="Picture of Secondary children"
+                height="200px"
+              />
               <h3>Secondary</h3>
             </a>
           </figure>
@@ -199,7 +203,10 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 CIKAN Excel School. All rights reserved.</p>
+      <p id="copyright">
+        &copy; <span id="currentYear"></span> CIKAN Excel School. All rights
+        reserved.
+      </p>
     </footer>
 
     <script src="Cikan.js"></script>
